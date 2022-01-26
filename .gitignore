@@ -6,6 +6,9 @@ node_modules/
 /.pnp
 .pnp.js
 
+/Z_assets
+Z_assets/
+
 # testing
 /coverage
 
