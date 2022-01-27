@@ -1,0 +1,23 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "description": "pro MERN app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitgregor/proshop22012022.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitgregor/proshop22012022/issues"
+  },
+  "homepage": "https://github.com/gitgregor/proshop22012022#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
