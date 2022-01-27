@@ -82,6 +82,10 @@ const products = [
 // it is ES modue
 // export default products
 
-// for products.js in backend we need  module.exports
+// for products.js in backend we need  module.exports with require('') function using in node
 
-module.exports = products
+// module.exports = products
+
+//after we changed require (ES15) on import (typ: module in package.json) we have to come back agen to export defult products as a module.js 
+
+export default products

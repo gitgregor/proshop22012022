@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "pro MERN app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/gitgregor/proshop22012022#readme",
   "dependencies": {
+    "dotenv": "^14.3.2",
     "express": "^4.17.2"
   },
   "devDependencies": {
