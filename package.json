@@ -23,7 +23,8 @@
   "homepage": "https://github.com/gitgregor/proshop22012022#readme",
   "dependencies": {
     "dotenv": "^14.3.2",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

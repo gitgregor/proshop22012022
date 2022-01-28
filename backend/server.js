@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import connectDB from './config/db.js'
 import products from './data/products.js'
 
 // those was used before configure module in package.json
@@ -9,6 +10,8 @@ import products from './data/products.js'
 // const products = require('./data/products')
 
 dotenv.config()
+
+connectDB()
 
 const app = express()
 
