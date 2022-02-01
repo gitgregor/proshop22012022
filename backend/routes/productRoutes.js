@@ -33,12 +33,17 @@ router.get(
         if (product) {
             res.json(product)
         } else {
-            res.status(404).json({ message: 'Product not found' })
+            // we dont need status 404 below to works it , but we want set it on 404 in tahat situation 
+            res.status(404)
+            throw new Error('Product not found')
+
+            // tha was before seting errohandlers in lesson 25
+            // res.status(404).json({ message: 'Product not found' })
         }
 
         //was before seeder
         // const product = products.find(p => p._id === req.params.id)
-        res.json(product)
+        // res.json(product)
     }))
 
 export default router
