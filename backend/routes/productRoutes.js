@@ -1,7 +1,10 @@
 import express from 'express'
-import asyncHandler from 'express-async-handler'
+// import asyncHandler from 'express-async-handler'
 const router = express.Router()
-import Product from '../models/productModel.js'
+// import Product from '../models/productModel.js'
+import { getProducts, getProductById } from '../controllers/productController.js'
+
+
 
 // app.get  routes from server.js  has changed on router.get
 
@@ -11,13 +14,20 @@ import Product from '../models/productModel.js'
 // @access Public
 
 // find all products
-router.get(
-    '/',
-    asyncHandler(async (req, res) => {
-        const products = await Product.find({})
+// that was before conroller for routes
 
+/**
+ * router.get('/',asyncHandler(async (req, res) => {
+        const products = await Product.find({})
         res.json(products)
-    }))
+    })) 
+ * 
+ * 
+*/
+
+router.route('/').get(getProducts)
+
+
 
 
 // @desc Fetch single product
@@ -25,7 +35,11 @@ router.get(
 // @access Public
 
 // find specific product
-router.get(
+// that was before conroller for routes
+
+/**
+ * 
+ * router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const product = await Product.findById(req.params.id)
@@ -45,6 +59,11 @@ router.get(
         // const product = products.find(p => p._id === req.params.id)
         // res.json(product)
     }))
+ * 
+ */
+
+router.route('/:id').get(getProductById)
+
 
 export default router
 
